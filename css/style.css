@@ -446,6 +446,12 @@ nav {
   box-shadow: 0 0 12px var(--green-glow);
 }
 
+.v1-repo-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .timeline-connector {
   display: flex;
   flex-direction: column;
