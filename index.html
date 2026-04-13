@@ -1,252 +1,521 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>BlackEagle</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/fontAwesome.css">
-        <link rel="stylesheet" href="css/hero-slider.css">
-        <link rel="stylesheet" href="css/templatemo-main.css">
-        <link rel="stylesheet" href="css/owl-carousel.css">
-
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-<!--
-Vanilla Template
-https://templatemo.com/tm-526-vanilla
--->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BlackEagle — Enterprise-grade parental control platform. Full-stack monitoring system built with React 19, Spring Boot 3, C/C++ Windows agent, and AES-256 encryption.">
+  <title>BlackEagle — Parental Control Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
 
-    <div class="parallax-content baner-content" id="home">
-        <div class="container">
-            <div class="first-content">
-                <h1>BlackEagle</h1>
-				<br><br>
-                    <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-                      <li><a style="color:white" onclick="openInNewTab('https://github.com/Shabtai204/FinalProject-Parental-Control-Server')";>Server source code</a></li>
-					  <li><a style="color:white" onclick="openInNewTab('https://github.com/Shabtai204/FinalProject-Parental-Control-Spyware')";>Spyware source code</a></li>
-                      <li><a style="color:white" onclick="openInNewTab('https://github.com/Shabtai204/FinalProject-Parental-Control-Client')";>Mangement source code</a></li>
-					</ul>
-					<br><br>
-                <div class="primary-button">
-                    <a href="#services">Discover More</a>
-                </div>
-            </div>
+<!-- ══════════════════════════════════════════════════
+     BOOT SCREEN
+══════════════════════════════════════════════════ -->
+<div id="boot-screen">
+  <pre class="boot-ascii">
+██████╗ ██╗      █████╗  ██████╗██╗  ██╗    ███████╗ █████╗  ██████╗ ██╗     ███████╗
+██╔══██╗██║     ██╔══██╗██╔════╝██║ ██╔╝    ██╔════╝██╔══██╗██╔════╝ ██║     ██╔════╝
+██████╔╝██║     ███████║██║     █████╔╝     █████╗  ███████║██║  ███╗██║     █████╗
+██╔══██╗██║     ██╔══██║██║     ██╔═██╗     ██╔══╝  ██╔══██║██║   ██║██║     ██╔══╝
+██████╔╝███████╗██║  ██║╚██████╗██║  ██╗    ███████╗██║  ██║╚██████╔╝███████╗███████╗
+╚═════╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝</pre>
+  <div class="boot-terminal">
+    <div id="boot-lines"></div>
+    <span class="boot-cursor" id="boot-cursor"></span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════════════ -->
+<div id="main-content">
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">BLACKEAGLE</a>
+    <ul class="nav-links">
+      <li><a href="#evolution">EVOLUTION</a></li>
+      <li><a href="#architecture">ARCHITECTURE</a></li>
+      <li><a href="#modules">MODULES</a></li>
+      <li><a href="#security">SECURITY</a></li>
+      <li><a href="#stack">STACK</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <canvas id="matrix-canvas"></canvas>
+    <div class="hero-content">
+      <h1 class="glitch" data-text="BLACKEAGLE">BLACKEAGLE</h1>
+      <p class="hero-subtitle">Enterprise-Grade Parental Control Platform</p>
+      <div class="hero-badges">
+        <span class="badge">React 19</span>
+        <span class="badge">Spring Boot 3</span>
+        <span class="badge">C / C++</span>
+        <span class="badge">Python 3</span>
+        <span class="badge">AES-256</span>
+        <span class="badge">Docker</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="https://github.com/Shabtai204/BlackEagle-Parental-Control"
+           target="_blank" rel="noopener" class="btn-terminal">[&gt; View v2 Repo]</a>
+        <a href="https://github.com/Shabtai204/Shabtai204.github.io"
+           target="_blank" rel="noopener" class="btn-terminal">[&gt; View v1 Site]</a>
+      </div>
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-value" data-target="20000" data-suffix="+">0+</span>
+          <span class="stat-label">Lines of Code</span>
         </div>
-    </div>
-
-
-    <div class="service-content" id="services">
-        <div class="container">
-            <div class="row">
-                
-				<div class="col-md-4">
-				
-                    <div class="left-text">
-                        <h4>About BlackEagle</h4>
-                        <div class="line-dec"></div>
-                        <p>Create your account and control up to 5 devices securely, and for free.
-                            You may choose which sites you would like to block or choose a pre-made list of sites by category. E.g. Social networks, Adults content, Gambling sites and more..
-                            The service also allow you to fully control a remote computer and send requests for different types of data.
-                            Lock, take screenshots, activate camera or microphone, collect keylogs and browser history and much more.
-                        <ul>
-                            <li>- TLS 1.2 </li>
-							<li>- AES-256 encryption</li>
-							<li>- Two factor authentication by default</li>
-							<li>- Secure password policy</li>
-							<li>- SHA256 and salt for secure storage of login data</li>
-							<li>- Brute force prevention</li>
-							<li>- Denial of service prevention</li>
-							<li>- Role based authorization</li>
-							<li>- Secure against SQL-injections</li>
-							<li>- XSS attack prevention</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Take Screenshots</h4>
-                                <div class="line-dec"></div>
-                                <p>Take a screenshot of the remote computer in order to know what is being done on it.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Collect Keylogs</h4>
-                                <div class="line-dec"></div>
-                                <p>Determine which processes are running and which were killed since last snapshot.</p>
-                            </div>
-                        </div>
-						<div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Take Camera Shots</h4>
-                                <div class="line-dec"></div>
-                                <p>Get a picture of the user on a remote computer by opening the camera.</p>
-                            </div>
-                        </div>
-						<div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Record Audio</h4>
-                                <div class="line-dec"></div>
-                                <p>Receive a voice recording from the remote computer.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Remote Lockdown</h4>
-                                <div class="line-dec"></div>
-                                <p>Lock the remote computer and change its password.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Remote Commands</h4>
-                                <div class="line-dec"></div>
-                                <p>Run CMD commands on the monitored computer to stop processes, monitor folders and much more.</p>
-                            </div>
-                        </div>
-						<div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Location Services</h4>
-                                <div class="line-dec"></div>
-                                <p>Get location information of the remote computer.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Network History</h4>
-                                <div class="line-dec"></div>
-                                <p>Get the browsing history of the monitored computer.</p>
-                            </div>
-                        </div>
-						<div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Network Filtering</h4>
-                                <div class="line-dec"></div>
-                                <p>Decide which websites the monitored computer cannot access.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="service-item">
-                                <h4>Secure and private</h4>
-                                <div class="line-dec"></div>
-                                <p>Highest security standards in the industry. Private by default.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
-            </div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="25" data-suffix="+">0+</span>
+          <span class="stat-label">REST Endpoints</span>
         </div>
-    </div>
-
-    
-    <div class="parallax-content projects-content" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="owl-testimonials" class="owl-carousel owl-theme">
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/1.png" data-lightbox="image-1"><img src="img/1.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/2.png" data-lightbox="image-1"><img src="img/2.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/3.png" data-lightbox="image-1"><img src="img/3.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/4.png" data-lightbox="image-1"><img src="img/4.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/5.png" data-lightbox="image-1"><img src="img/5.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/6.png" data-lightbox="image-1"><img src="img/6.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/7-1.png" data-lightbox="image-1"><img src="img/7-1.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonials-item">
-                                <a href="img/1.png" data-lightbox="image-1"><img src="img/1.png" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                    <br><br>
-                    <div style="text-align: center">     
-                    <div class="item">
-                        <div class="testimonials-item">
-                          <iframe width="500" height="250" frameborder="0" src="https://mega.nz/embed/y51nkT4a#d1560p4wd49vmDa1heHVNn3ZQQhDwf_TjG0g-VWq_no" allowfullscreen ></iframe>
-                        </div>
-                    </div>
-                    <br><br><br><br><br>
-
-                </div>
-                </div>
-            </div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="12">0</span>
+          <span class="stat-label">Concurrent Modules</span>
         </div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="6" data-suffix="+">0+</span>
+          <span class="stat-label">Security Layers</span>
+        </div>
+      </div>
     </div>
+    <div class="scroll-hint">&#9660;&nbsp;SCROLL</div>
+  </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+  <!-- EVOLUTION -->
+  <div id="evolution">
+    <div class="section-wrap">
+      <div class="section-header">
+        <span class="section-tag">// 01</span>
+        <h2 class="section-title">EVOLUTION</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
 
-    <script>
-        $(document).ready(function(){
-          // Add smooth scrolling to all links
-          $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
+        <div class="timeline-node from-left">
+          <div class="node-ver">VERSION 1.0 &mdash; 2024</div>
+          <div class="node-title">Proof of Concept</div>
+          <div class="node-desc">
+            A static front-end specification website that laid out the full vision:
+            feature catalogue, security claims, and UI mockups &mdash; built before
+            a single line of backend code was written. Ten features documented,
+            security requirements fully specified.
+          </div>
+          <div class="tag-row">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://github.com/Shabtai204/Shabtai204.github.io"
+             target="_blank" rel="noopener" class="btn-sm">[&gt;&nbsp;v1 Repo]</a>
+        </div>
 
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-              // Prevent default anchor click behavior
-              event.preventDefault();
+        <div class="timeline-connector">
+          <div class="connector-dot"></div>
+          <div class="connector-line"></div>
+          <div class="connector-arrow">&#9660;</div>
+          <div class="connector-line"></div>
+          <div class="connector-dot"></div>
+        </div>
 
-              // Store hash
-              var hash = this.hash;
+        <div class="timeline-node from-right">
+          <div class="node-ver">VERSION 2.0 &mdash; 2026</div>
+          <div class="node-title">Full-Stack Production</div>
+          <div class="node-desc">
+            End-to-end implementation: a C++ Windows agent with 12 concurrent
+            monitoring modules, an AES-256 encrypted data pipeline, an enterprise
+            REST API with Spring Security, and a production React dashboard &mdash;
+            20,000+ lines of code across 4 components.
+          </div>
+          <div class="tag-row">
+            <span class="tag">React 19</span>
+            <span class="tag">Spring Boot 3</span>
+            <span class="tag">C / C++</span>
+            <span class="tag">Python 3</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+          </div>
+          <a href="https://github.com/Shabtai204/BlackEagle-Parental-Control"
+             target="_blank" rel="noopener" class="btn-sm">[&gt;&nbsp;v2 Repo]</a>
+        </div>
 
-              // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-              $('html, body').animate({
-                scrollTop: $(hash).offset().top
-              }, 800, function(){
-           
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              });
-            } // End if
-          });
-        });
-		
-		function openInNewTab(url) {
-			window.open(url, '_blank').focus();
-		}
-    </script>
+      </div>
+    </div>
+  </div>
 
+  <!-- ARCHITECTURE -->
+  <div id="architecture">
+    <div class="section-wrap">
+      <div class="section-header">
+        <span class="section-tag">// 02</span>
+        <h2 class="section-title">ARCHITECTURE</h2>
+        <div class="section-line"></div>
+      </div>
+      <p style="color:var(--text-dim);font-size:0.72rem;margin-bottom:2.5rem;letter-spacing:1px;">
+        Click any component to expand details.
+      </p>
+      <div class="arch-wrapper">
+
+        <div class="arch-box" id="arch-agent">
+          <div class="arch-box-title">C++ Agent / Python Simulator</div>
+          <div class="arch-box-sub">Windows monitoring agent &mdash; 12 concurrent Win32 threads</div>
+          <div class="arch-detail">
+            Twelve modules run as concurrent Win32 threads with event-based signaling.
+            Captures screenshots via GDI BitBlt, keystrokes via low-level keyboard hook
+            (WH_KEYBOARD_LL), webcam frames via OpenCV, 30&thinsp;s audio clips via WinMM,
+            Chrome/Edge SQLite history, IP geolocation via libcurl, and more.<br><br>
+            A Python simulator mirrors all 12 modules for development &mdash; no Visual Studio
+            or OpenCV installation required. Pre-seeded test devices are ready to use out of the box.
+          </div>
+        </div>
+
+        <div class="arch-arrow">
+          <div class="arch-arrow-label">POST /data/upload &nbsp;&bull;&nbsp; multipart/form-data &nbsp;&bull;&nbsp; TLS 1.2</div>
+          <div class="arch-arrow-line"></div>
+          <div class="arch-arrow-tip">&#9660;</div>
+          <div class="arch-arrow-label">AES-256/CBC encrypted payload &nbsp;&bull;&nbsp; DEVICE role auth</div>
+        </div>
+
+        <div class="arch-box" id="arch-server">
+          <div class="arch-box-title">Spring Boot 3 REST API</div>
+          <div class="arch-box-sub">Java 17 &nbsp;&bull;&nbsp; PostgreSQL 14 &nbsp;&bull;&nbsp; Docker Compose</div>
+          <div class="arch-detail">
+            25+ endpoints handling device registration, data ingestion, user management,
+            session auth, event auditing, and remote-action dispatch.<br><br>
+            Spring Security 6 with PBKDF2+SHA-256 password hashing, 7-digit OTP 2FA via SMTP,
+            Bucket4j rate limiting (150&thinsp;req/min), IP lockout at 5 failed attempts,
+            account lockout at 10 (10-min block), dictionary-attack prevention against
+            14 million leaked passwords, Spring AOP audit logging, paginated responses,
+            and daily Excel report generation.
+          </div>
+        </div>
+
+        <div class="arch-arrow">
+          <div class="arch-arrow-label">JSON REST API &nbsp;&bull;&nbsp; session cookies &nbsp;&bull;&nbsp; CORS</div>
+          <div class="arch-arrow-line"></div>
+          <div class="arch-arrow-tip">&#9660;</div>
+          <div class="arch-arrow-label">Role-based access: PLAYER / DEVICE</div>
+        </div>
+
+        <div class="arch-box" id="arch-client">
+          <div class="arch-box-title">React 19 Dashboard</div>
+          <div class="arch-box-sub">TypeScript &nbsp;&bull;&nbsp; Vite 7 &nbsp;&bull;&nbsp; shadcn/ui &nbsp;&bull;&nbsp; Tailwind CSS 4</div>
+          <div class="arch-detail">
+            Seven dedicated data pages: screenshots, keylogs, audio, camera, browser history,
+            location, and remote commands. Features include infinite scroll, date-range filtering,
+            keyword search, activity heatmaps, Recharts data visualization, lightbox viewer,
+            inline audio playback, and daily Excel export.<br><br>
+            Device management panel supports rename, delete, content-blocking config, and remote
+            actions: on-demand screenshot, audio, camera, location, CMD, and lockdown.
+            State managed with Zustand + TanStack Query.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULES -->
+  <div id="modules">
+    <div class="section-wrap">
+      <div class="section-header">
+        <span class="section-tag">// 03</span>
+        <h2 class="section-title">SYSTEMS ONLINE</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="modules-grid">
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">SCREENSHOT</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Multi-monitor screen capture on demand and on schedule. Delivered as BMP via multipart upload.</div>
+          <div class="module-tech">GDI BitBlt &nbsp;&bull;&nbsp; Win32 API</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">KEYLOGGER</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Window-grouped keystroke capture with 60-second rotation. Logs tagged per active window title.</div>
+          <div class="module-tech">WH_KEYBOARD_LL &nbsp;&bull;&nbsp; SetWindowsHookEx</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">CAMERA</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Single-frame webcam capture delivered as PNG. Triggered remotely from the parent dashboard.</div>
+          <div class="module-tech">OpenCV 4.5.5 &nbsp;&bull;&nbsp; VideoCapture</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">MICROPHONE</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">30-second WAV recording at 22 050 Hz, 8-bit mono. Stored encrypted, played inline in dashboard.</div>
+          <div class="module-tech">WinMM Audio API &nbsp;&bull;&nbsp; waveIn*</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">BROWSER HISTORY</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Chrome and Edge SQLite history extraction. Dashboard renders domain frequency charts and category breakdowns.</div>
+          <div class="module-tech">SQLite3 &nbsp;&bull;&nbsp; CopyFile API</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">GEOLOCATION</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">IP-based geolocation lookup returning city, region, and country. Presented chronologically in the location page.</div>
+          <div class="module-tech">libcurl &nbsp;&bull;&nbsp; ipinfo.io JSON API</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">REMOTE CMD</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Execute arbitrary Windows shell commands remotely. Captures stdout and streams output back to the dashboard.</div>
+          <div class="module-tech">ShellExecuteEx &nbsp;&bull;&nbsp; Win32 Pipes</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">CONTENT BLOCKING</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Category-based website blocking via atomic hosts-file replacement. Block lists configured per device from the dashboard.</div>
+          <div class="module-tech">Hosts File &nbsp;&bull;&nbsp; Atomic File Replace</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">REMOTE LOCKDOWN</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Force password change and screen lock on the target machine. Triggered remotely with a single dashboard action.</div>
+          <div class="module-tech">NetUserSetInfo &nbsp;&bull;&nbsp; LockWorkStation</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">NET LOGGER</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Active network connections snapshot. Uses netstat and PowerShell certificate ID for process-level resolution.</div>
+          <div class="module-tech">psutil &nbsp;&bull;&nbsp; netstat &nbsp;&bull;&nbsp; PowerShell</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">DATA STEALER</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Browser SQLite database file extraction, uploaded for server-side parsing and dashboard presentation.</div>
+          <div class="module-tech">CopyFile API &nbsp;&bull;&nbsp; Win32 FS</div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-header">
+            <div class="status-dot"></div>
+            <span class="module-name">PROCESS MONITOR</span>
+            <span class="module-status">ONLINE</span>
+          </div>
+          <div class="module-desc">Running process and window enumeration. Provides context for keylogger window grouping and activity correlation.</div>
+          <div class="module-tech">EnumWindows &nbsp;&bull;&nbsp; GetWindowText</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SECURITY -->
+  <div id="security">
+    <div class="section-wrap">
+      <div class="section-header">
+        <span class="section-tag">// 04</span>
+        <h2 class="section-title">SECURITY MANIFEST</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="manifest-box" id="manifest-box">
+        <div class="manifest-header">SECURITY_MANIFEST.v2 ─────────────────────────────</div>
+
+        <div class="manifest-line" data-delay="0">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">TLS 1.2</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">Transport layer encryption for all agent &harr; server communication</span>
+        </div>
+        <div class="manifest-line" data-delay="140">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">AES-256 / CBC</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">Surveillance data encrypted at rest with a random IV per record</span>
+        </div>
+        <div class="manifest-line" data-delay="280">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">PBKDF2 + SHA-256</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">Password storage with random salt via Spring Security encoder</span>
+        </div>
+        <div class="manifest-line" data-delay="420">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">OTP 2FA</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">7-digit one-time code sent by email on every new registration</span>
+        </div>
+        <div class="manifest-line" data-delay="560">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">Brute-Force Lockout</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">IP blocked at 5 attempts, account at 10 &mdash; 10-minute cooldown</span>
+        </div>
+        <div class="manifest-line" data-delay="700">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">Rate Limiting</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">150 requests / minute per client enforced by Bucket4j</span>
+        </div>
+        <div class="manifest-line" data-delay="840">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">Dictionary Attack Prevention</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">Passwords checked against 14 million leaked passwords (rockyou.dict)</span>
+        </div>
+        <div class="manifest-line" data-delay="980">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">SQL Injection Prevention</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">JPA prepared statements used throughout the data access layer</span>
+        </div>
+        <div class="manifest-line" data-delay="1120">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">XSS Protection</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">X-XSS-Protection header + Content Security Policy on all responses</span>
+        </div>
+        <div class="manifest-line" data-delay="1260">
+          <span class="m-check">[&#10003;]</span>
+          <span class="m-name">Session Management</span>
+          <span class="m-dash">&mdash;</span>
+          <span class="m-info">24-hour cookie timeout, RBAC with PLAYER / DEVICE roles</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECH STACK -->
+  <div id="stack">
+    <div class="section-wrap">
+      <div class="section-header">
+        <span class="section-tag">// 05</span>
+        <h2 class="section-title">TECH STACK</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="stack-grid">
+
+        <div class="stack-card c-blue">
+          <div class="stack-component">Client</div>
+          <ul class="stack-items">
+            <li>React 19</li>
+            <li>TypeScript 5.9</li>
+            <li>Vite 7</li>
+            <li>Tailwind CSS 4</li>
+            <li>shadcn / ui</li>
+            <li>TanStack Query</li>
+            <li>Zustand</li>
+            <li>Axios</li>
+            <li>Recharts</li>
+            <li>React Router</li>
+          </ul>
+        </div>
+
+        <div class="stack-card c-green">
+          <div class="stack-component">Server</div>
+          <ul class="stack-items">
+            <li>Java 17</li>
+            <li>Spring Boot 3.5</li>
+            <li>Spring Security 6</li>
+            <li>Spring Data JPA</li>
+            <li>Spring AOP</li>
+            <li>Hibernate</li>
+            <li>PostgreSQL 14</li>
+            <li>Bucket4j</li>
+            <li>Docker Compose</li>
+            <li>Maven</li>
+          </ul>
+        </div>
+
+        <div class="stack-card c-red">
+          <div class="stack-component">Agent (C / C++)</div>
+          <ul class="stack-items">
+            <li>Visual Studio 2022</li>
+            <li>Win32 API</li>
+            <li>GDI / GDI+</li>
+            <li>OpenCV 4.5.5</li>
+            <li>libcurl</li>
+            <li>WinMM Audio</li>
+            <li>WinHTTP</li>
+            <li>JsonCpp</li>
+            <li>Netapi32</li>
+          </ul>
+        </div>
+
+        <div class="stack-card c-yellow">
+          <div class="stack-component">Simulator (Python)</div>
+          <ul class="stack-items">
+            <li>Python 3</li>
+            <li>mss (screenshots)</li>
+            <li>pynput (keylogger)</li>
+            <li>OpenCV</li>
+            <li>sounddevice</li>
+            <li>requests</li>
+            <li>psutil</li>
+            <li>sqlite3</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p style="margin-bottom:0.5rem;">
+      <a href="https://github.com/Shabtai204/BlackEagle-Parental-Control" target="_blank" rel="noopener">BlackEagle v2 on GitHub</a>
+      <span class="footer-divider">&middot;</span>
+      <a href="https://github.com/Shabtai204" target="_blank" rel="noopener">@Shabtai204</a>
+    </p>
+    <p>BlackEagle &mdash; Built 2024&ndash;2026
+       <span style="color:var(--text-dim);">&nbsp;&middot;&nbsp; All systems nominal.</span>
+    </p>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
